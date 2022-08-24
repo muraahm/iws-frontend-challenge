@@ -1,5 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
+import IWS_MQTT from "./mqtt"
 
 Vue.config.productionTip = false;
 new Vue({
@@ -12,18 +13,14 @@ new Vue({
     }
   },
   created() {
-    let host = 'test.mosquitto.org';
-    let port = 8080;
+    const HOST = 'test.mosquitto.org';
+    const PORT = 8080;
 
-    console.log("Connecting to " + host + " " + port);
-    this.mqtt = new Paho.MQTT.Client(host, port, "clientjs");
-    let options = {
-      timeout: 3,
-      onSuccess: (() => {
-          console.log("Connected");
-          this.$emit('mqtt-connected', true)
-        })
-    };
-    this.mqtt.connect(options); //connect
+    console.log("Connecting to " + HOST + " " + PORT);
+    this.mqtt = new IWS_MQTT(HOST, PORT);
+    this.mqtt.connect(() => {
+      this.$emit('mqtt-connected', true)
+    })
+
   }
 }).$mount("#app");

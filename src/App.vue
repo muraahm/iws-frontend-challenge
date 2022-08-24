@@ -1,18 +1,21 @@
 <template>
   <div id="app">
+    <RawPublisher />
     <HelloWorld />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import RawPublisher from "./components/RawPublisher.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
+    RawPublisher,
   },
-};
+}
 </script>
 
 <style>
