@@ -15,8 +15,6 @@ new Vue({
   created() {
     const HOST = 'test.mosquitto.org';
     const PORT = 8080;
-
-    console.log("Connecting to " + HOST + " " + PORT);
     this.mqtt = new IWS_MQTT(HOST, PORT);
     this.mqtt.connect(() => {
       this.$emit('mqtt-connected', true)

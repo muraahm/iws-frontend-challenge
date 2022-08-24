@@ -22,10 +22,11 @@ export default class IWS_MQTT {
 
   _defaultConnect() {
     this.connected = true
-    console.log(`Connected to ws://${this.host}:${this.port}`)
+    console.log('Connected!')
   }
 
   connect(callbackFn = null) {
+    console.log(`Connecting to ws://${this.host}:${this.port}`);
     let successCallbackFn = this._defaultConnect
     if (callbackFn) {
       successCallbackFn = () => {
