@@ -12,13 +12,15 @@ The purpose of this app is to read a raw value, supplied by a 4-20 mA sensor pub
 
 For this context, lets assume the input is coming from a thermometer and thus the output value is a temperature.
 
-*Estimated completion time: 2 hours*
+*Estimated completion time: 2-3 hours*
 
 ---
 ## Task#1:
 Understand MQTT and how it can be used in the browser.
 
 You can learn more about MQTT here: https://www.hivemq.com/mqtt-essentials/
+
+For this app you will only need to understand how to publish and subscribe to messages.
 
 For this app we are connecting to a publicly hosted mqtt broker: test.mosquitto.org so be aware subscribing to all topics ('#') is not recommended.
 ### Requirements
@@ -31,7 +33,7 @@ Create a Vue component which publishes a value over an MQTT network. This will s
 ### Requirements
 - For this task, the `RawPublisher.vue` file should be modified.
 - The value should only publish once per second.
-- The value should oscillate continuously between 0 and 20, at a configurable rate of change.
+- The value should oscillate continuously between 0 and 20, at a configurable rate of change (default to 0.1/second).
 - The publish topic should be: `iws_<your first name>`
    - Example: `iws_patrick`
 - The payload should be a JSON of format: `{"value": <number> }`
