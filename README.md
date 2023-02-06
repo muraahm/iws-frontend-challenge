@@ -33,7 +33,11 @@ Create a Vue component which publishes a value over an MQTT network. This will s
 ### Requirements
 - For this task, the `RawPublisher.vue` file should be modified.
 - The value should only publish once per second.
-- The value should oscillate continuously between 0 and 20, at a configurable rate of change (default to 0.1/second).
+- The value should oscillate continuously between 0 and 20, at a configurable rate of change (default to 0.5mA/second).
+   - Note that oscillate is defined as moving steadily (not randomly) back and forth between two points.
+   - The rate of change interval should remain CONSTANT at 1 second.
+   - Example with each comma seperated value representing output each second:
+   `0, 0.5, 1, 1.5, ... , 18.5, 19, 19.5, 20, 19.5, 19, ... , 1.5, 1, 0.5, 0, 0.5, 1, ...`
 - The publish topic should be: `iws_<your first name>`
    - Example: `iws_patrick`
 - The payload should be a JSON of format: `{"value": <number> }`
@@ -59,3 +63,9 @@ You can read more about 4-20 mA sensors and how to scale to an output value here
 	- Engineering Low (default: -70 deg C)
 	- Engineering High (default: 70 deg C)
   - Oscillation speed  of raw publisher (default: 0.1 mA/s) 
+
+## Submission steps
+Once you have completed ALL 3 tasks, you can submit your code:
+- Please create a .ZIP file of your project (without the npm dependencies) and upload to any cloud storage that can be shared with us.
+- DO NOT push your work back to this repository.
+- Not required, but helpful if a .git file is included in the zip and shows history of change from the original (does not need to be commited).
