@@ -1,5 +1,5 @@
 <template>
-  <div class="subscriber-container">
+  <div class="subscriber-container" data-testid="subscriber-container-element">
     <div class="publisher-readings-container">
       <h2>Status:</h2>
       <div>
@@ -29,7 +29,6 @@ import CalibrationForm from "./CalibrationForm";
 
 export default {
   name: "SubscriberContainer",
-  props: ["rawActualRate", "rawActualRateChange"],
   components: {
     CalibrationForm,
   },

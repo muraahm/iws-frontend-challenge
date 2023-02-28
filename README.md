@@ -7,6 +7,10 @@ npm install
 ```
 npm run serve
 ```
+## Project test
+```
+npm run test:unit
+```
 ## Overview
 The purpose of this app is to read a raw value, supplied by a 4-20 mA sensor publishing over an mqtt network, and then scale it into a useful output value.
 

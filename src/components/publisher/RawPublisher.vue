@@ -1,5 +1,5 @@
 <template>
-  <div class="raw-publisher-container">
+  <div class="raw-publisher-container" data-testid="raw-publisher-element">
     <h2>Publisher: {{ rawActual && rawActual.toFixed(2) }}</h2>
   </div>
 </template>

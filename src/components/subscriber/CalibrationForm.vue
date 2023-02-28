@@ -1,5 +1,5 @@
 <template>
-  <div class="calibration-form-container">
+  <div class="calibration-form-container" data-testid="calibration-form-element">
     <div class="title">
       <h3>Calibration</h3>
       <div>

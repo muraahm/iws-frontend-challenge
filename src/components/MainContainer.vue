@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container" data-testid="main-container-element">
     <RawPublisher />
     <SubscriberContainer />
   </div>

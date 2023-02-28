@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" data-testid="app-element">
     <MainContainer />
   </div>
 </template>
