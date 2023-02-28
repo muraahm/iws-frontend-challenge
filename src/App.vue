@@ -1,21 +1,18 @@
 <template>
-  <div id="app">
-    <RawPublisher />
-    <HelloWorld />
+  <div id="app" data-testid="app-element">
+    <MainContainer />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import RawPublisher from "./components/RawPublisher.vue";
+import MainContainer from "./components/MainContainer";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    RawPublisher,
-  },
-}
+    MainContainer
+  }
+};
 </script>
 
 <style>
